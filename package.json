@@ -1,23 +1,23 @@
 {
   "name": "theme",
-  "version": "0.0.0",
-  "description": "Redux-sage app",
-  "main": "server.js",
-  "repository": "Vahe Grigorian",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "version": "0.0.1",
+  "description": "theme",
+  "main": "src/index.js",
+  "repository": "https://github.com/griggis/theme.git",
+  "author": "Vahe Grigorian",
   "scripts": {
+    "build": "webpack --config ./webpack/prod.js -p",
+    "start": "webpack-dev-server --config ./webpack/dev.js --env=dev --progress --profile --colors",
     "test": "mocha --compilers js:babel-register --require babel-polyfill --watch"
   },
   "dependencies": {
-    "async": "~0.2.8",
     "express": "^3.2.6",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "redux": "^3.7.0",
-    "redux-saga": "^0.15.3",
-    "socket.io": "~0.9.14"
+    "redux-saga": "^0.15.3"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -30,13 +30,16 @@
     "eslint": "^4.0.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
-    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-import": "^2.5.0",
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
     "expect": "^1.20.2",
+    "extract-text-webpack-plugin": "^2.1.2",
     "mocha": "^3.4.2",
-    "nock": "^9.0.13"
+    "nock": "^9.0.13",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
   }
 }
