@@ -23,7 +23,7 @@ Slider.propTypes = {
   activeItem: PropTypes.number.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
-    img: PropTypes.shape({src: PropTypes.string.isRequired, alt: PropTypes.string.isRequired}),
+    img: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired
   })),
   handleBack: PropTypes.func.isRequired,

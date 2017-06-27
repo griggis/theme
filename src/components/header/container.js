@@ -7,7 +7,25 @@ export const SLIDER_FORWARD = 'SLIDER_FORWARD'
 export const sliderBack = () => ({type: SLIDER_BACK})
 export const sliderForward = () => ({type: SLIDER_FORWARD})
 
-export const header = (state = {}, action) => {
+const initState = {
+  activeItem: 1,
+  sliderThumbs: '/sprites/banner.png'
+  items: [
+    {
+      id: 1,
+      price: 100,
+      title: 'Shirts',
+      caption: 'We do awesome shirt paintings',
+      itemPageLink: '/shirts',
+      img: {
+        alt: 'a thumb image of a shirt'
+      }
+    }
+  ]
+}
+
+
+export const header = (state = initState, action) => {
   switch (action.type) {
     case SLIDER_BACK:
       return {...state, activeItem: state.activeItem - 1 }
