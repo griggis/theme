@@ -1,7 +1,7 @@
 import { AppContainer } from 'react-hot-loader'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import RootContainer from './containers/'
+import Slider from './components/slider'
 
 const rootEl = document.getElementById('builder-root')
 const render = Component =>
@@ -12,5 +12,5 @@ const render = Component =>
     rootEl
   )
 
-render(RootContainer)
-if (module.hot) module.hot.accept('./containers', () => render(RootContainer))
+render(Slider)
+if (module.hot) module.hot.accept('./containers', () => render(Slider))
